@@ -99,7 +99,46 @@ footer p {
     background-color: #ffc;
     font-weight: bold;
   }
+    .indice {
+      position: fixed;
+      top: 100px; /* Ajuste a posição vertical conforme necessário */
+      right: 20px; /* Ajuste a posição horizontal conforme necessário */
+      background-color: #f8f9fa;
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: calc(100vh - 40px); /* Limita a altura máxima do índice */
+      overflow-y: auto; /* Adiciona barra de rolagem quando necessário */
+    }
+    .indice ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .indice li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px; /* Espaço para o quadrado colorido */
+    }
+    .indice li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      border: 2px solid #555;
+    }
 
+    /* Definições de cores para cada item */
+    .indice li.item1::before {
+      background-color: #ffc; /* Cor para o item 1 */
+    }
+    .indice li.item2::before {
+      background-color: #28a745; /* Cor para o item 2 */
+    }
+    .indice li.item3::before {
+      background-color: #dc3545; /* Cor para o item 3 */
+    }
 </style>
 </head>
 <body>
@@ -109,9 +148,10 @@ footer p {
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="galeria.html">Galeria de Fotos</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
-                    <li><a href="material.html">Material de Formações</a></li>
+                    <li><a href="material.html">Formações</a></li>
+                    <li><a href="galeria.html">Galeria de Fotos</a></li>
+                    <li><a href="links.html">Sites Sugeridos</a></li>
                 </ul>
             </nav>
         </div>
@@ -911,8 +951,22 @@ footer p {
     </tr>
   </tbody>
 </table>
+  <div class="indice">
+    <ul>
+      <li class="item1"><p>Formação LEEI</p></li>
+      <li class="item2"><p>Item 2</p></li>
+      <li class="item3"><p>Item 3</p></li>
+      <!-- Adicione outros itens conforme necessário -->
+    </ul>
+  </div>
+  <div class="container">
+          <p>&copy; 2024 Educação Infantil - Alfabetização no Tempo Certo</p>
+  </div>
+  <footer>
         <div class="container">
             <p>&copy; 2024 Educação Infantil - Alfabetização no Tempo Certo</p>
         </div>
+  </footer>
+
 </body>
 </html>

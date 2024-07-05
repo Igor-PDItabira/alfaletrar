@@ -133,3 +133,12 @@ nav a:hover {
    right: 20px;
    cursor: pointer;
 }
+
+  img {
+    /* Ajusta a imagem para ocupar toda a tela */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Remove espaço extra */
+    display: block;
+  }

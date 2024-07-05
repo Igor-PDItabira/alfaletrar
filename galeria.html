@@ -92,11 +92,14 @@ footer p {
     box-sizing: border-box; 
 }
 .gallery-item img {
-    display: block;
+    display: flex;
     width: 80%;
     height: auto;
     transition: transform 0.2s ease;
     padding: 20px;
+    max-width: 100%; /* Imagens não podem ser maiores que o seu contêiner */
+    max-height: 400px; /* Altura máxima para as imagens */
+    object-fit: cover; /* Mantém a proporção e corta se necessário */
 }
 .gallery-item img:hover {
     transform: scale(1.1);
@@ -130,6 +133,7 @@ footer p {
    right: 20px;
    cursor: pointer;
 }
+
 </style>
 </head>
 <body>
@@ -139,9 +143,10 @@ footer p {
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="galeria.html">Galeria de Fotos</a></li>
                     <li><a href="agenda.html">Agenda</a></li>
-                    <li><a href="material.html">Material de Formações</a></li>
+                    <li><a href="material.html">Formações</a></li>
+                    <li><a href="galeria.html">Galeria de Fotos</a></li>
+                    <li><a href="links.html">Sites Sugeridos</a></li>
                 </ul>
             </nav>
         </div>
@@ -192,5 +197,11 @@ footer p {
             modal.style.display = "none";
         }
     </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Educação Infantil - Alfabetização no Tempo Certo</p>
+        </div>
+    </footer>
 </body>
 </html>
