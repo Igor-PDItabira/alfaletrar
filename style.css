@@ -142,3 +142,9 @@ nav a:hover {
     /* Remove espaço extra */
     display: block;
   }
+  
+ /* Estilo para a imagem */
+    .icone {
+      width: 70px; /* Largura desejada */
+      height: 60px; /* Altura desejada */
+    }
